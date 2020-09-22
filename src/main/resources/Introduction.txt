@@ -7,7 +7,7 @@ Su característica más importante es el enrutamiento dinámico de los microserv
 que estén registrados. Se integra con ribbon de forma automática.
 Cuenta con filtros para dar seguridad a las rutas. En vez de configurar spring security
 en cada microservicio de forma separada, se configura una sóla vez en nuestra puerta de 
-entrada mediante zuul.
+entrada mediante zuul. 
 
 Enrutamiento dinámico
 Balanceo de carga
