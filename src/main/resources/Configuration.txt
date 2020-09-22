@@ -1,0 +1,36 @@
+Configurations:
+
+1) Agregar dependencias ==>
+
+Recordar que es un servicio que tiene que registrarse en eureka como client.
+
+Spring Cloud Routing ==> Zuul
+
+2) Clase principal ==>
+
+@EnableEurekaClient
+@EnableZuulProxy
+
+3) application.properties ==>
+
+Nombre del servicio:
+spring.application.name=
+
+Puerto:
+server.port=
+
+Ruta hacia eureka:
+eureka.client.service-url.defaultZone=
+
+Enrutamiento dinámino de microservicios:
+zuul.routes.persons.service-id=persons-microservice
+Se establece el path. Todos los endpoints de persons van a estar mapeados a un prefijo ==>
+zuul.routes.persons.path=/api/persons/**
+
+El persons es un nombre que puede ser cualquiera y luego del igual el nombre con el que está
+registrado el microservicio en eureka.
+
+Todos estos enrutamientos a diferentes microservicios son especificados aquí.
+
+
+ 
