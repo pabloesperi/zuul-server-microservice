@@ -33,4 +33,14 @@ registrado el microservicio en eureka.
 Todos estos enrutamientos a diferentes microservicios son especificados aquí.
 
 
+Spring Oauth: brindar seguridad a la ruta principal:
+
+En primer lugar creamos un paquete y dentro del mismo la clase de seguridad.
+La misma debe de llevar las anotaciones @Configuration y @EnableAuthorizationServer.
+La clase debe extender de AuthorizationServerConfigurerAdapter.
+Se tienen que sobreescribir los métodos de dicha clase.
+Se tienen que tener los mismos métodos tokenStore() y accessTokenConverter(), configurados de igual 
+forma que en el microservicio oauth. Tiene que ser el mismo código secreto o llave 
+con el cual se firma el token. 
+
  
